@@ -24,21 +24,12 @@ Gulp.prototype.run = function() {
 
 Gulp.prototype.src = vfs.src;
 Gulp.prototype.dest = vfs.dest;
-Gulp.prototype.watch = function(glob, opt, fn) {
-  if (typeof opt === 'function' || Array.isArray(opt)) {
-    fn = opt;
-    opt = null;
-  }
 
-  // Array of tasks given
-  if (Array.isArray(fn)) {
-    return vfs.watch(glob, opt, function() {
-      this.start.apply(this, fn);
-    }.bind(this));
-  }
-
-  return vfs.watch(glob, opt, fn);
-};
+Gulp.prototype.watch = deprecated.method('gulp.watch() has been deprecated. ' +
+  'Use gulp-watch instead.',
+  console.warn,
+  Gulp.prototype.run
+);
 
 // Let people use this class from our instance
 Gulp.prototype.Gulp = Gulp;

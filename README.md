@@ -7,6 +7,15 @@
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]
 
+## This fork
+
+It's basically a Gulp 3.9.1 with updated vinyl-fs, so
+* it has easy task dependencies system from v3
+* it fixes security vulnerabilities v3 has
+* it doesn't have gulp.watch as it was removed from vinyl-fs - but you can switch to [gulp-watch](https://github.com/floatdrop/gulp-watch) quite easily
+
+You can install it with `yarn add "artemv/gulp#5.0.0-pre.1"`
+  
 ## What is gulp?
 
 - **Automation** - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.

@@ -2,7 +2,6 @@
 
 var util = require('util');
 var Orchestrator = require('orchestrator');
-var deprecated = require('deprecated');
 var vfs = require('vinyl-fs');
 
 function Gulp() {
@@ -24,29 +23,8 @@ Gulp.prototype.run = function() {
 Gulp.prototype.src = vfs.src;
 Gulp.prototype.dest = vfs.dest;
 
-Gulp.prototype.watch = deprecated.method('gulp.watch() has been deprecated. ' +
-  'Use gulp-watch instead.',
-  console.warn,
-  Gulp.prototype.run
-);
-
 // Let people use this class from our instance
 Gulp.prototype.Gulp = Gulp;
-
-// Deprecations
-deprecated.field('gulp.env has been deprecated. ' +
-  'Use your own CLI parser instead. ' +
-  'We recommend using yargs or minimist.',
-  console.warn,
-  Gulp.prototype,
-  'env'
-);
-
-Gulp.prototype.run = deprecated.method('gulp.run() has been deprecated. ' +
-  'Use task dependencies or gulp.watch task triggering instead.',
-  console.warn,
-  Gulp.prototype.run
-);
 
 var inst = new Gulp();
 module.exports = inst;

@@ -78,9 +78,9 @@ gulp.task('release', function (callback) {
     'github-release',
     function (error) {
       if (error) {
-        console.log(error.message);
+        log(error.message);
       } else {
-        console.log('RELEASE FINISHED SUCCESSFULLY');
+        log('RELEASE FINISHED SUCCESSFULLY');
       }
       callback(error);
     });

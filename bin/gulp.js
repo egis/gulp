@@ -144,7 +144,7 @@ function logTasks(env, localGulp) {
 }
 
 function logTasksSimple(env, localGulp) {
-  console.log(Object.keys(localGulp.tasks)
+  log(Object.keys(localGulp.tasks)
     .join('\n')
     .trim());
 }

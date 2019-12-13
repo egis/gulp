@@ -55,8 +55,7 @@ npm is open for everyone, and you are free to make whatever you want but these g
 ```js
 // through2 is a thin wrapper around node transform streams
 var through = require('through2');
-var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
+var PluginError = require('plugin-error');
 
 // Consts
 const PLUGIN_NAME = 'gulp-prefixer';

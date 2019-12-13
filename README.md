@@ -15,7 +15,7 @@ It's basically a Gulp 3.9.1 with updated vinyl-fs, so
 * it fixes security vulnerabilities v3 has
 * it doesn't have gulp.watch as it was removed from vinyl-fs - but you can switch to [gulp-watch](https://github.com/floatdrop/gulp-watch) quite easily
 
-You can install it with `yarn add "artemv/gulp#5.0.0-pre.1"`
+You can install it with `yarn add "artemv/gulp#v5.0.0-pre.2"`
   
 ## What is gulp?
 

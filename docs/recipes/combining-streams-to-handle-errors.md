@@ -10,6 +10,7 @@ Here's an example of using it in a gulpfile:
 var combiner = require('stream-combiner2');
 var uglify = require('gulp-uglify');
 var gulp = require('gulp');
+var log = require('fancy-log');
 
 gulp.task('test', function() {
   var combined = combiner.obj([
@@ -20,7 +21,7 @@ gulp.task('test', function() {
 
   // any errors in the above streams will get caught
   // by this listener, instead of being thrown:
-  combined.on('error', console.error.bind(console));
+  combined.on('error', log);
 
   return combined;
 });
